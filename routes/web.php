@@ -49,6 +49,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('/notfound', function() {
+    return view('others.notfound');
+});
+
 require __DIR__.'/auth.php';
 
 // Auth::routes();
@@ -176,4 +180,7 @@ Route::post('/datauser/import_excel',[ImportController::class,'import_user'])->n
 // -> Fallback System
 Route::get('fallback',function(){
     Artisan::call('migrate:rollback');
+
+
+
 });

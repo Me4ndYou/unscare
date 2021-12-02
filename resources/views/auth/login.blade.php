@@ -1,65 +1,51 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <div class="text-center">
-            <img src="{{asset('CostumStyle/images/cardiogram.png')}}" alt="">
+    <title>
+        Login | UNSCare
+    </title>
+
+    <link rel="stylesheet" href="{{asset('CostumStyle\css\regislog.css')}}">
+    <link rel="stylesheet" href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css') }}">
+    
+</head>
+<body>
+    <div class="content tabelku">
+        <div class="image-box animate__animated animate__fadeInLeft"> 
+            <img src="{{ asset('CostumStyle/images/login.svg') }}">
         </div>
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
-
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+    <form method="POST" action="{{ route('login') }}" class="animate__animated animate__tada">
+        @csrf
+        <div class="topic">Welcome Back!</div>
+            <div class="input-box">
+                <input id="email" type="email" name="email" :value="old('email')" required>
+                <label for="email" :value="__('Email Address')">Email Address</label>
+            </div>
+        
+            <div class="input-box">
+                <input id="password" type="password" name="password" required autocomplete="current-password">
+                <label for="password" :value="__('Password')">Password</label>
             </div>
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
+            <div class="remember">
+                <input id="remember_me" type="checkbox" name="remember" class="checkmark">       
+                <label for="remember_me">Remember me</label>
+            </div>
+        
+            <div class="input-box">
+                <input type="submit" value="Submit">
             </div>
 
-            <!-- Remember Me -->
-            <div class="block mt-4">
-                <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
+            <div class="goto_regis">
+                <span>Not registered yet?</span>
+                <a href="{{ url('register') }}" class="">
+                    Register Here!
+                </a>
             </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <!-- @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                    @endif -->
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ url('register') }}">
-                        Register New Account
-                    </a>
-
-                <!-- <a href="#" class="ml-3 btn btn-sm">
-                    Register New Account
-                </a> -->
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+    </form>
+  </div>
+</body>
+</html>

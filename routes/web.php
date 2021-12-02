@@ -45,12 +45,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
 Route::get('/notfound', function() {
     return view('others.notfound');
+});
+
+Route::get('/chat', function() {
+    return view('chat.chat');
+});
+
+Route::get('/dashboard', function() {
+    return view('layouts.dashboard');
+});
+
+Route::get('/layout', function() {
+    return view('layouts.layout');
 });
 
 require __DIR__.'/auth.php';

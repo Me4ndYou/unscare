@@ -7,13 +7,13 @@
 @endsection
 
 @if(($complete->status ?? '') != 'biasa' && ($complete->verified ?? '') == 'yes')
-@section('status')
-{{ $complete->status }} &nbsp;&&nbsp; {{ $user->role }}
-@endsection
-@else
-@section('status')
-{{ $user->role }}
-@endsection
+    @section('status')
+    {{ $complete->status }} &nbsp;&&nbsp; {{ $user->role }}
+    @endsection
+    @else
+    @section('status')
+    {{ $user->role }}
+    @endsection
 @endif
 
 @section('content')
@@ -30,7 +30,7 @@
                     </li>
                 </ol>
             </nav>
-        </div>&nbsp;&nbsp;
+        </div>
 
         @if(($data ?? '') == null)
         <div class="btn btn-primary "> Belum Ada </div>
@@ -42,8 +42,6 @@
         <div class="btn btn-success "> Sudah Sembuh ! </div>
         @endif
 
-        &nbsp;&nbsp;
-
         @if(($vaksin ?? '') != null)
         <div class="btn btn-primary "> Sudah Vaksin ! dosis {{$vaksin->dosis_ke}}</div>
         @endif
@@ -51,63 +49,66 @@
         <div class="btn btn-warning "> Belum Vaksin Covid ! </div>
         @endif
 
-        &nbsp;&nbsp;
-
         <div class="ms-auto">
             <div class="btn-group">
                 <button type="button" class="btn btn-outline-secondary btn-lg ">
-                    @if((Auth::user()->role ?? '') == 'admin'
-                    || (Auth::user()->role ?? '') == 'operator')                    
-                    @if($total_notification > 0)
-                    <span class="alert-count">
-                    {{$total_notification}}</span>
-                    @endif    
+                    @if((Auth::user()->role ?? '') == 'admin' || (Auth::user()->role ?? '') == 'operator')                    
+                        @if($total_notification > 0)
+                            <span class="alert-count">{{$total_notification}}</span>
+                        @endif    
                     @endif
-                    <i class='bx bxs-bell '></i> Notifications</button>
+                    <i class='bx bxs-bell '></i>
+                    <span>Notifications</span>
+                </button>
                 <button type="button" class="btn btn-secondary split-bg-secondary dropdown-toggle dropdown-toggle-split"
-                    data-bs-toggle="dropdown">
+                        data-bs-toggle="dropdown">
                     <span class="visually-hidden">Toggle Dropdown</span>
                 </button>
-                @if((Auth::user()->role ?? '') == 'admin'
-                || (Auth::user()->role ?? '') == 'operator')
+
+                @if((Auth::user()->role ?? '') == 'admin'|| (Auth::user()->role ?? '') == 'operator')
                 <div class="nav-item dropdown dropdown-large dropdown-menu dropdown-menu-end">
                     <a class="dropdown-item" href="{{url('/admin/datapositifcovid')}}">
                         <div class="d-flex align-items-center">
-                            <div class="notify bg-light-primary text-primary"><i class="bx bxs-virus"></i>
+                            <div class="notify bg-light-primary text-primary">
+                                <i class="bx bxs-virus"></i>
                             </div>
                             <div class="flex-grow-1">
-                                <h6 class="msg-name">{{$notification_isoman}} user melaporkan covid
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <span class="msg-time float-end"></span></h6>
-                                <p class="msg-info">Butuh Konfirmasi Segera !</p>
+                                <h6 class="msg-name">
+                                    {{$notification_isoman}} User Melaporkan Covid
+                                    <span class="msg-time float-end"></span>
+                                </h6>
+                                <p class="msg-info">Butuh Konfirmasi Segera!</p>
                             </div>
                         </div>
                     </a>
                     <a class="dropdown-item" href="{{url('/admin/datavaksin')}}">
                         <div class="d-flex align-items-center">
-                            <div class="notify bg-light-danger text-danger"><i class="bx bxs-capsule"></i>
+                            <div class="notify bg-light-danger text-danger">
+                                <i class="bx bxs-capsule"></i>
                             </div>
                             <div class="flex-grow-1">
-                                <h6 class="msg-name">{{$notification_vaksin}} user melaporkan vaksin
-                                    <span class="msg-time float-end"></span></h6>
-                                <p class="msg-info">Butuh Konfirmasi Segera !</p>
+                                <h6 class="msg-name">
+                                    {{$notification_vaksin}} User Melaporkan Vaksin
+                                    <span class="msg-time float-end"></span>
+                                </h6>
+                                <p class="msg-info">Butuh Konfirmasi Segera!</p>
                             </div>
                         </div>
                     </a>
                     <!-- <div class="dropdown-divider"></div> -->
-                    <a href="javascript:;">
+                    <a href="#">
                         <div class="text-center msg-footer">View All Notifications</div>
                     </a>
-                    <!-- <a class="dropdown-item" href="javascript:;">Separated link</a> -->
+                    <!-- <a class="dropdown-item" href="#">Separated link</a> -->
                 </div>
+                
                 @else
                 <div class="nav-item dropdown dropdown-large dropdown-menu dropdown-menu-end">
                     <!-- <div class="dropdown-divider"></div> -->
-                    <a href="javascript:;">
+                    <a href="#">
                         <div class="text-center msg-footer">Anda tidak memiliki notifikasi apapun</div>
                     </a>
-                    <!-- <a class="dropdown-item" href="javascript:;">Separated link</a> -->
+                    <!-- <a class="dropdown-item" href="#">Separated link</a> -->
                 </div>
                 @endif
             </div>
@@ -124,7 +125,7 @@
 
     <!-- Page Break -->
     <hr />
-    <p class="mb-0 text-uppercase display-5 text-center">wellcome to uns care</p>
+    <p class="mb-0 text-uppercase display-5 text-center">Welcome to UNS Care</p>
     <hr />
     <!-- end of Page Break -->
 

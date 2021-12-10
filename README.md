@@ -1,14 +1,27 @@
-"# unscare" 
+# UNSCare
 
--   Clone or download this repo
--   `composer install`
--   `rename .env.example into .env`
--   `php artisan key:generate`
+UNSCare is a health system information / telemedicine
 
--   Create database
--   `Modify 'DB_DATABASE' on .env file with your DB name.`
--   `php artisan migrate --seed`
--   `npm install`
--   `npm run dev`
--   `php artisan storage:link`
--   `php artisan serve `
+## Features
+
+- Responsive UI
+- Dashboard
+- Role-based Access Control
+
+## Installation
+
+UNSCare requires [PHP](https://www.php.net/) v7+ & [Composer](https://getcomposer.org/) v2.2+
+
+Clone the repository or download it then follow this steps
+```sh
+composer install
+//rename .env.example into .env
+php artisan key:generate
+//create database
+//modify 'DB_DATABASE' on .env file with your DB name
+php artisan migrate --seed
+npm install
+npm run dev
+php artisan storage:link
+php artisan serve
+```

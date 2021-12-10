@@ -65,7 +65,7 @@ header{
     width: 40px;
     position: relative;
     color: #ffffff;
-    font-size: px;
+    font-size: 2rem;
 }
 header .bx{
     color: #fff;
@@ -74,7 +74,7 @@ header .bx{
     display: flex;
 }
 .navbar a{
-    font-size: 1rem;
+    font-size: 1.3rem;
     padding: 11px 20px;
     color: var(--main-color);
     font-weight: 600;
@@ -170,11 +170,12 @@ header .bx{
     object-position: center;
 }
 .explain-container .box h2{
-    font-size: 1.3rem;
+    font-size: 2rem;
+    font-weight: 900;
 }
 .explain-container .box p{
-    font-size: 1.1rem;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 5git00;
     margin: 0.2rem 0 0.5rem;
     line-height: 1.3em;
     font-family: 'DM Sans', sans-serif;
@@ -191,13 +192,11 @@ header .bx{
 .about-text{
     flex: 1 1 21rem;
 }
-.about-text h2, .app .app-text h2{
-    font-size: 1.2rem;
-}
 .about-text p, .app .app-text p{
+    font-size: 1.25rem;
     margin: 0.5rem 0 1rem;
     text-align: justify;
-    line-height: 1.3rem;
+    line-height: 1.8rem;
 }
 .about-text .btn{
     padding: 10px 30px;
@@ -257,6 +256,9 @@ header .bx{
     text-align: center;
 }
 @media (max-width: 1150px){
+    body{
+        overflow-x: hidden;
+    }
     header{
         padding: 18px 7%;
     }
@@ -271,6 +273,9 @@ header .bx{
     }
 }
 @media (max-width: 991px){
+    body{
+        overflow-x: hidden;
+    }
     header{
         padding: 18px 4%;
     }
@@ -279,6 +284,9 @@ header .bx{
     }
 }
 @media (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
     header{
         padding: 11px 4%;
     }
@@ -319,6 +327,9 @@ header .bx{
     }
 }
 @media(max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
     .home-text{
         padding-top: inherit;
     }
@@ -333,6 +344,9 @@ header .bx{
     }
 }
 @media(max-width: 364px){
+    body{
+        overflow-x: hidden;
+    }
     .links{
         display: flex;
         flex-direction: column;

@@ -55,22 +55,22 @@
                 <div class="box-img">
                     <img src="CostumStyle\HomePage\bx-chat.svg" alt="">
                 </div>
-                <h2>Konsultasi</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, rem!</p>
+                <h2>KONSULTASI</h2>
+                <p>Konsultasi dengan Dokter berpengalaman dan terverifikasi dengan beragam pilihan dokter umum dan dokter spesialis di UNS</p>
             </div>
             <div class="box" data-aos="fade-up">
                 <div class="box-img">
                     <img src="CostumStyle\HomePage\bx-donate-heart.svg" alt="">
                 </div>
-                <h2>Bantuan Sosial</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis rerum maxime nesciunt, veritatis quas doloribus.</p>
+                <h2>BANTUAN SOSIAL</h2>
+                <p>Gotong royong membantu civitas UNS yang terdampak pandemi</p>
             </div>
             <div class="box" data-aos="fade-left">
                 <div class="box-img">
                     <img src="CostumStyle\HomePage\bx-plus-medical.svg" alt="">
                 </div>
-                <h2>PCR & Antigen</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi repellat libero blanditiis!</p>
+                <h2>PCR & ANTIGEN</h2>
+                <p>Layanan Swab Test yang Aman, Cepat, dan Nyaman secara gratis</p>
             </div>
         </div>
     </section>
@@ -84,9 +84,11 @@
                 <img src="CostumStyle\HomePage\rs_uns.jpeg" alt="">
             </div>
             <div class="about-text" data-aos="fade-up-left">
-                <h2>Introduction</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, recusandae? Earum itaque voluptates aliquam, perspiciatis error quae. Esse, quasi dignissimos.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem deleniti pariatur quas!</p>
+                <h2>INTRODUCTION</h2>
+                <p>UNSCare merupakan Sistem Informasi Kesehatan yang dibuat dengan tujuan untuk menjadi solusi dalam sistem pemantauan dan pengecekan kesehatan civitas UNS dan juga menunjang fasilitas kinerja Medical Center UNS & RS. UNS
+                </p>
+                <p>Tujuan dibuatnya UNSCare yaitu untuk menunjang fasilitas kinerja Medical Center UNS tanpa harus mengalokasikan beberapa unsur yang berkaitan dengan pembiayaan yang banyak dan membutuhkan waktu yang kurang efisien. Kedepannya UNSCare diharapkan dapat menjadi solusi dalam sistem pemantauan dan pengecekan protokol kesehatan sebagai upaya pencegahan penyebaran COVID-19 dan menunjang kesehatan serta aktivitas civitas UNS di tatanan New Normal.
+                </p>
                 <a href="#" class="btn">Learn More</a>
             </div>
         </div>
@@ -98,7 +100,7 @@
         </div>
         <div class="container">
             <div class="app-text" data-aos="fade-down-right">
-                <h2>Introduction</h2>
+                <h2>GET OUR SERVICES</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, recusandae? Earum itaque voluptates aliquam, perspiciatis error quae. Esse, quasi dignissimos.</p>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem deleniti pariatur quas!</p>
                 <a href="#" class="btn">Get App</a>

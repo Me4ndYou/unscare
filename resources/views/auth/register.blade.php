@@ -10,9 +10,14 @@
 
     <link rel="stylesheet" href="{{asset('CostumStyle\css\regislog.css')}}">
     <link rel="stylesheet" href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css') }}">
-    
+
 </head>
 <body>
+    <header class="animate__animated animate__fadeInDown">
+        <a href="{{ url('/') }}" class="logo">
+            <h3 class="logoname">UNSCare</h3>
+        </a>
+    </header>
     <div class="content tabelku">
         <div class="image-box animate__animated animate__fadeInLeft"> 
             <img src="{{ asset('CostumStyle/images/register.svg') }}">
@@ -48,7 +53,7 @@
 
             <div class="goto_regis">
                 <span>Alredy have an account?</span>
-                <a href="{{ url('login') }}" class="">
+                <a href="{{ url('login') }}" onclick="validation()">
                     Login
                 </a>
             </div>

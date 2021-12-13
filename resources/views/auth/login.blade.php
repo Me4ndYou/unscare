@@ -13,7 +13,12 @@
     
 </head>
 <body>
-    <div class="content tabelku">
+    <header class="animate__animated animate__fadeInDown">
+        <a href="{{ url('/') }}" class="logo">
+            <h3 class="logoname">UNSCare</h3>
+        </a>
+    </header>
+    <div class="content">
         <div class="image-box animate__animated animate__fadeInLeft"> 
             <img src="{{ asset('CostumStyle/images/login.svg') }}">
         </div>

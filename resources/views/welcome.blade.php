@@ -21,14 +21,14 @@
 </head>
 <body>
     <header class="animate__animated animate__fadeInDown">
-        <a href="{{ url('/') }}" class="logo">
+        <a href="#" class="logo">
             <h3 class="logoname">UNSCare</h3>
         </a>
         <div class="bx bx-menu" id="menu-icon"></div>
 
         <ul class="navbar">
-            <li><a href="{{ url('notfound') }}">FAQS</a></li>
-            <li><a href="{{ url('notfound') }}">ABOUT</a></li>
+            <li><a href="{{ url('faqs') }}">FAQS</a></li>
+            <li><a href="{{ url('about') }}">ABOUT</a></li>
             <li><a href="{{ url('login') }}">LOGIN</a></li>
             <li><a href="{{ url('register') }}">REGISTER</a></li>
         </ul>
@@ -89,7 +89,7 @@
                 </p>
                 <p>Tujuan dibuatnya UNSCare yaitu untuk menunjang fasilitas kinerja Medical Center UNS tanpa harus mengalokasikan beberapa unsur yang berkaitan dengan pembiayaan yang banyak dan membutuhkan waktu yang kurang efisien. Kedepannya UNSCare diharapkan dapat menjadi solusi dalam sistem pemantauan dan pengecekan protokol kesehatan sebagai upaya pencegahan penyebaran COVID-19 dan menunjang kesehatan serta aktivitas civitas UNS di tatanan New Normal.
                 </p>
-                <a href="#" class="btn">Learn More</a>
+                <a href="{{ url('about') }}" class="btn">Learn More</a>
             </div>
         </div>
     </section>
@@ -101,8 +101,7 @@
         <div class="container">
             <div class="app-text" data-aos="fade-down-right">
                 <h2>GET OUR SERVICES</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, recusandae? Earum itaque voluptates aliquam, perspiciatis error quae. Esse, quasi dignissimos.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem deleniti pariatur quas!</p>
+                <p>Download our free app, and you can have access to care anytime on your smartphone, from anywhere!</p>
                 <a href="#" class="btn">Get App</a>
             </div>
             <div class="app-img" data-aos="fade-down-left">

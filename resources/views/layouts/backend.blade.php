@@ -13,9 +13,11 @@
     <link href="{{asset('CostumStyle/plugins/datatable/css/dataTables.bootstrap5.min.css')}}" rel="stylesheet" />
     <link href="{{asset('CostumStyle/plugins/datatable/css/dataTables.dateTime.min.css')}}" rel="stylesheet" />
     <link href="{{asset('CostumStyle/plugins/datatable/css/jquery.dataTables.min.css')}}" rel="stylesheet" />
+
     <!-- loader-->
     <link href="{{asset('CostumStyle/css/pace.min.css')}}" rel="stylesheet" />
     <script src="{{asset('CostumStyle/js/pace.min.js')}}"></script>
+
     <!-- CSS -->
     <link href="{{asset('CostumStyle/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('CostumStyle/css/app.css')}}" rel="stylesheet">
@@ -25,14 +27,77 @@
     <title>Dashboard | UNSCare</title>
 </head>
 
-<!-- Bagian Body Semua Berawal Dari Sini -->
-
 <body>
+    <header>
+        <div class="topbar d-flex align-items-center">
+            <nav class="navbar navbar-expand">
+                <div class="mobile-toggle-menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+                <div class="top-menu ms-auto">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item dropdown dropdown-large">
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a href="#"></a>
+                                <div class="header-notifications-list"></div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown dropdown-large">
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a href="#"></a>
+                                <div class="header-message-list"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user-box dropdown">
+                    <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bx bxs-user-circle bx-lg"></i>
+                        <div class="user-info ps-3">
+                            <p class="user-name mb-0">@yield('data')</p>
+                            <p class="designattion mb-0">@yield('status')</p>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <i class="bx bx-user"></i>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <i class="bx bx-cog"></i>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <i class='bx bx-home-circle'></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="dropdown-divider mb-0"></div>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{url('/logout')}}">
+                                <i class='bx bx-log-out-circle'></i>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
     <div class="wrapper">
-        <div class="sidebar-wrapper" data-simplebar="true">
+        <div class="sidebar-wrapper">
             <div class="sidebar-header">
                 <div>
-                    <img src="{{asset('CostumStyle/images/medicine.png')}}" class="logo-icon" alt="logo icon">
+                    <i class='bx bxs-heart bx-md logo-icon' alt="logo icon" ></i>
                 </div>
                 <div>
                     <br>
@@ -42,11 +107,11 @@
                     <br>
                 </div>
                 <div class="toggle-icon ms-auto">
-                    <i class='bx bx-chevron-left-circle font-35'></i>
+                    <i class='bx bx-menu bx-sm'></i>
                 </div>
             </div>
 
-            <!--Navigation-->
+            <!-- Sidebar -->
             <ul class="metismenu" id="menu">
                 <li>
                     <a href="{{url('/home')}}" class="">
@@ -197,78 +262,6 @@
             <!--end navigation-->
         </div>
         <!--end sidebar wrapper -->
-
-        <!--start header (Bagian Atas (Topbar)) -->
-        <header>
-            <div class="topbar d-flex align-items-center">
-                <nav class="navbar navbar-expand">
-                    <div class="mobile-toggle-menu">
-                        <i class='bx bx-menu'></i>
-                    </div>
-                    <div class="top-menu ms-auto">
-                        <ul class="navbar-nav align-items-center">
-                            <li class="nav-item mobile-search-icon">
-                                <a class="nav-link" href="#">
-                                    <i class='bx bx-search'></i>
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown dropdown-large">
-                                <div class="dropdown-menu dropdown-menu-end">
-                                    <a href="#"></a>
-                                    <div class="header-notifications-list"></div>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown dropdown-large">
-                                <div class="dropdown-menu dropdown-menu-end">
-                                    <a href="#"></a>
-                                    <div class="header-message-list"></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="user-box dropdown">
-                        <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bx bxs-user-circle text-secondary font-50"></i>
-                            <div class="user-info ps-3">
-                                <p class="user-name mb-0">@yield('data')</p>
-                                <p class="designattion mb-0">@yield('status')</p>
-                            </div>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    <i class="bx bx-user"></i>
-                                    <span>Profile</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    <i class="bx bx-cog"></i>
-                                    <span>Settings</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    <i class='bx bx-home-circle'></i>
-                                    <span>Dashboard</span>
-                                </a>
-                            </li>
-                            <li>
-                                <div class="dropdown-divider mb-0"></div>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="{{url('/logout')}}">
-                                    <i class='bx bx-log-out-circle'></i>
-                                    <span>Logout</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </header>
-        <!--end header -->
 
         <!--start page wrapper (Bagian Isi Utama)-->
         <div class="page-wrapper">
@@ -424,5 +417,4 @@
 
 
 </body>
-
 </html>

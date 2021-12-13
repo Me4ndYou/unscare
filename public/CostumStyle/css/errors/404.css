@@ -36,15 +36,17 @@ body{
 }
 .container a{
     text-decoration: none;
-    background: #9c69fa;
+    border: 2px solid;
     color: #ffffff;
-    padding: 12px 24px;
+    padding: 10px 30px;
     display: inline-block;
-    border-radius: 25px;
+    border-radius: 40px;
     font-size: 14px;
+    font-weight: 500;
     text-transform: uppercase;
     transition: 0.4s;
 }
 .container a:hover{
     color: #5699fc;
+    background: #ffffff;
 }

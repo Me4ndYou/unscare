@@ -1,4 +1,4 @@
-@extends('layouts.Backup')
+@extends('layouts.backup')
 <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
     <!--end breadcrumb-->
     <div class="container-fluid">
